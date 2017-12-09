@@ -1,0 +1,26 @@
+{
+  "name": "reactwebpage",
+  "version": "1.0.0",
+  "description": "An updated webpage using React 16 and Webpack 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstowers/ReactWebpage.git"
+  },
+  "keywords": [
+    "webpage",
+    "react",
+    "redux",
+    "webpack",
+    "node"
+  ],
+  "author": "Joe Stowers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jstowers/ReactWebpage/issues"
+  },
+  "homepage": "https://github.com/jstowers/ReactWebpage#readme"
+}
