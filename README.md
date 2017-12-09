@@ -27,6 +27,19 @@ Basic Webpage Setup:
     - webpack (3.10.0)
     - webpack-dev-server (2.9.7)
 4. Install dependencies using npm install
-5. Start webpack dev server
+5. Build webpack bundle
 6. Render "Hello, World"
+
+
+Webpack Build
+
+- Add an npm script in package.json to run the locally-installed version of webpack:
+        npm run build
+
+Babel Modules
+1.  babel-loader => teaches babel how to work with webpack
+2.  babel-core => knows how to take in code, parse it, and generate files
+3.  babel-preset-env => ruleset (dozens of individual rules) for telling babel exactly what pieces of ES15/16/17 syntax to look for, and how to turn it into ES5 code.  Turns arrow functions into regular functions.  Turns let into var.
+
+Add Babel to Webpack Loaders
 

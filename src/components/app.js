@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 export default class App extends Component {
   	render() {
 	    return (
-	      <div>My Updated Webpage</div>
+	      	<div>
+	      		<h1>My Updated Webpage</h1>
+  			</div>
 	    );
   	}
 }
