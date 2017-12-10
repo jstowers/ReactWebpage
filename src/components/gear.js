@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import '../../style/image.css'
-import gear from '../../img/gear.png';
+import '../../style/gear.css';
+import gearPNG from '../../img/gearPNG.png';
+import gearSVG from '../../img/gearSVG.svg'
 
 class Gear extends Component {
+
   	render() {
 	    return (
 	      	<div>
-	      		<img src={ gear }/>
-  			</div>
+	      		<div>
+	      			<img className="gearSVG" 
+	      		         src={ gearPNG }/>
+	      		</div>
+	      		<div>
+	      			<img className="gearSVG"
+        		         src={ gearSVG }/>
+	      		</div>
+        	</div>
 	    );
   	}
 }
