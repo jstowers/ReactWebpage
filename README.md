@@ -43,3 +43,20 @@ Babel Modules
 
 Add Babel to Webpack Loaders
 
+
+## Webpack Dev Server
+
+### publicPath
+
+To allow on-demand-loading of webpages, it is important to specify the public URL of the output directory when referenced in a browser.  If this property is not specified correctly, the browser won't load any changes.
+
+The value of this property is prefixed to every URL created by the runtime or loaders.  Because of this, the value usually ends with a '/'
+
+Simple Rule: the URL of the output.path from the view of the HTML page.
+
+````    output: {
+            path: path.resolve(__dirname, 'build'),
+            publicPath: 'build/',
+            filename: 'bundle.js'
+        },
+````
