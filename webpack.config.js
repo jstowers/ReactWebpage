@@ -49,11 +49,13 @@ const config = {
   					},
   					'image-webpack-loader'
   				],
-  				test: /\.(jpe?g|png|gif|svg)$/,
-
+  				test: /\.(jpe?g|png|gif|svg)$/
   			}
   		]
-  	}
+  	},
+    resolve: {
+        extensions: ['.js', '.jsx']
+    }
 }
 
 module.exports = config;
