@@ -6,7 +6,7 @@ import gearSVG from '../../img/gearSVG.svg';
 class GearSmall extends Component {
 
 	render() {
-		const { rotate } = this.props;
+		const { rotate, onHover } = this.props;
 
 		if (rotate === 'right') {
 			return (
