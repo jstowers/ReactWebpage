@@ -1,5 +1,26 @@
 # ReactWebpage
-An updated webpage using React 16 and Webpack 3
+An updated webpage using React 16 and Webpack 3.
+
+## Run the Webpack Dev Server
+
+Lightweight dev server running on http://localhost:8080.  Implements hot loading to automatically refresh parts of the page that have changed.
+
+```
+    1.  To start the dev server:
+            $  npm run serve
+
+    2.  Open a new browser window:
+            http://localhost:8080
+
+```
+
+## Webpack Build
+
+- Add a node script in package.json to run the locally-installed version of webpack:
+        $  npm run build
+
+---
+
 
 ### December 9, 2017
 ---
@@ -32,10 +53,7 @@ Basic Webpage Setup:
 6. Render my updated homepage
 
 
-## Webpack Build
 
-- Add a node script in package.json to run the locally-installed version of webpack:
-        npm run build
 
 ## Webpack Loaders
 Loaders pre-process files before placing them into the bundle.js file
@@ -44,9 +62,6 @@ Loaders pre-process files before placing them into the bundle.js file
 1.  babel-loader => teaches babel how to work with webpack
 2.  babel-core => knows how to take in code, parse it, and generate files
 3.  babel-preset-env => ruleset (dozens of individual rules) for telling babel exactly what pieces of ES15/16/17 syntax to look for, and how to turn it into ES5 code.  Ex) turns arrow functions into regular functions; turns let into var.
-
-## Webpack Dev Server
-Lightweight dev server running on http://localhost:8080.  Implements hot loading to automatically refresh parts of the page that have changed.
 
 ### publicPath
 To allow on-demand-loading of webpages, it is important to specify the public URL of the output directory when referenced in a browser.  
@@ -64,3 +79,31 @@ If this property is not specified correctly, the browser won't load any changes.
             filename: 'bundle.js'
         },
 ````
+
+### Banner Build ###
+Wednesday, July 11, 2018
+
+After adding a Redux store and working out some connection kinks, I got the basic BannerContainer working.  The React component structure is shown below:
+
+````
+    BannerContainer
+        |
+        |__ Menu
+        |   |__ GearSmall
+        |   |__ Label
+        |
+        |__ Canvas
+            |__ CanvasContent
+````
+
+
+
+
+
+
+
+
+
+
+
+
