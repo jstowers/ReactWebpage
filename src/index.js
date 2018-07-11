@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/App';
+import reducers from './reducers';
 
-// import { Provider } from 'react-redux';
-// import { createStore, applyMiddleware } from 'redux';
-// import reducers from './reducers';
-// const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-	<App />
-	, document.querySelector('.container'));
-
-
-//<Provider store={createStoreWithMiddleware(reducers)}>
-//</Provider>
+	<Provider store={createStoreWithMiddleware(reducers)}>
+		<App />
+	</Provider>
+	, document.querySelector('.container')
+);
