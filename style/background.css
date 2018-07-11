@@ -1,24 +1,26 @@
 .contain {
 	background-color: #ddd;
 	padding: 10px;
+	height: 400px;
 }
 
 .content {
-	animation: move 3s linear infinite;
+	animation: move 4s linear;
 }
 
 @keyframes move {
 	0% {
-		opacity: 0;
+		opacity: 0.1;
 		transform: translateY(0);
 	}
 
 	50% {
-		transform: translateY(50px);
+		transform: translateY(200px);
 	}
 
 	100% {
 		opacity: 1;
-		translate:0;
+		/*translate:0;*/
+
 	}
 }
