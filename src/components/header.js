@@ -6,9 +6,13 @@ class Header extends Component {
 	render() {
 		return (
 			<div className={headerStyle}>
-				<h1>Joseph Stowers</h1>
-				<h2>Software Engineer</h2>
-				<h3>"Positively Driven, Creatively Built"</h3>
+				<div className='name'>
+					<h1>Joseph Stowers</h1>
+					<h2>Software Engineer</h2>
+				</div>
+				<div className='motto'>
+					<h3>"Positively Driven, Creatively Built"</h3>
+				</div>
 			</div>
 		);
 	}

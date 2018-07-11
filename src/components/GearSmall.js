@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-import '../../style/gear.css';
+import gearStyle from '../../style/gear.css';
 import gearSVG from '../../img/gearSVG.svg';
 
 // gear rotates left (counterclockwise) or right (clockwise)
 class GearSmall extends Component {
 
 	render() {
-		const { rotate, onHover } = this.props;
+		const { id, rotate, onMouseOver } = this.props;
 
 		if (rotate === 'right') {
 			return (
 				<div className="right">
 					<img 
+						id={id}
 						className="gearSVG"
 						alt="Small Gear"
 						src={gearSVG}
+						onMouseOver={onMouseOver}
 					/>
 				</div>
 			);
@@ -22,9 +24,11 @@ class GearSmall extends Component {
 			return (
 				<div className="left">
 					<img 
+						id={id}
 						className="gearSVG"
 						alt="Small Gear"
 						src={gearSVG}
+						onMouseOver={onMouseOver}
 					/>
 				</div>
 			);
