@@ -33,7 +33,6 @@ class Menu extends Component {
 		this.props.fetchCanvas(e.target.id);
 	}
 
-
 	displayMenuItems() {
 		return this.state.menuItems.map(item => {
 			return (

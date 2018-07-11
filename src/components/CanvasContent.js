@@ -14,11 +14,12 @@ class CanvasContent extends Component {
 	}
 
 	displayLineByLine(array) {
-		
-		return array.map((word) => 
+		return array.map((word, index) => 
 			(
-				<div className='content'>
-					{word}
+				<div 
+					className='content'
+					key={index}
+				>{word}
 				</div>
 			)
 		);
