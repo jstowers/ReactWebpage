@@ -1,0 +1,18 @@
+.menu {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.menu-tab {
+	width: 30vw;
+	background-color: tomato;
+	clip-path: polygon(0 18%, 100% 1%, 100% 100%, 0% 100%);
+	/*background-color: #54a0ff; sunflower blue*/
+}
+
+.text-box {
+	position: relative;
+    top: -10px; /* in relation to parent element */
+    left: 60%;
+    /*transform: translate(-50%, -60%); /* in relation to element itself */
+}

@@ -1,0 +1,118 @@
+
+/* A clean refresh so all browsers render the page the same way */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* padding and borders not added to height/width */
+}
+
+/* Font properties usually inherited from the parent (body) element */
+body {
+	font-family: Merriweather, Kameron, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7; /* 1.7x bigger than pre-defined line height */
+	color: black;
+	padding: 30px; /* applies 30px padding around body */
+}
+
+.header {
+	height: 95vh; /* at every point, 95% of viewport height */
+	background-image: linear-gradient(to right bottom, #7ed56f, rgba(40, 80, 131, 0.5)), url(../img/background_queenstown.jpg);
+	background-size: cover; /* try to fit element inside the box */
+	background-position: top;
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 30px;
+    backface-visibility: hidden;  /* won't see back part of element during an animation */
+}
+
+.heading-primary-main {
+	font-family: Kameron;
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 24px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-out;
+
+    /* other common animation effects
+	animation-delay: 1s;
+	animation-iteration-count: 3s;
+    */
+}
+
+.heading-primary-sub {
+	font-family: Kameron;
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 18px;
+
+    animation: moveInRight 1.4s ease-out; /* shorthand syntax /*
+
+	/*  Line-by-Line syntax
+    animation-name: moveInRight;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-out;
+    */
+}
+
+.heading-secondary {
+	
+	color: #fff;
+	position: absolute;
+    top: 72%; /* in relation to parent element */
+    right: 60px;
+    animation: moveInRight 1.4s ease-out;
+    /*transform: translate(-50%, -60%); /* in relation to element itself */
+
+}
+
+.heading-secondary-main {
+	font-family: Kameron;
+	display: block;
+	font-size: 24px;
+	letter-spacing: 4px;
+}
+
+
+@keyframes moveInLeft {
+    /* initial state = 0% */
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+	80% {
+		transform: translateX(10px);
+	}
+    /* final state = 100% */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    } 
+}
+
+@keyframes moveInRight {
+    /* initial state = 0% */
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+
+	80% {
+		transform: translateX(-10px);
+	}
+    /* final state = 100% */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    } 
+}
