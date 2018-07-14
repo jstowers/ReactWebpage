@@ -22,15 +22,12 @@ class GearSmall extends Component {
 			);
 		} else {
 			return (
-				<div className="left">
-					<img 
-						id={id}
-						className="gearSVG"
-						alt="Small Gear"
-						src={gearSVG}
-						onMouseOver={onMouseOver}
-					/>
-				</div>
+				<img 
+					id={id}
+					alt="Small Gear"
+					src={gearSVG}
+					onMouseOver={onMouseOver}
+				/>
 			);
 		}
 	}
