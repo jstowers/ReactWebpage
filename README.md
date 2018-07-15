@@ -96,6 +96,31 @@ After adding a Redux store and working out some connection kinks, I got the basi
             |__ CanvasContent
 ````
 
+__Questions__
+1.  Why are fat arrow functions not working in Menu.js?  Why do I have to bind the _this_ context in the constructor function?
+
+```
+    Answer:  
+    Arrow functions located inside a class are not included in the ES2015/2016 webpack configuration.  An additional npm package must be installed and added to the webpack configuration.
+
+    1.  Installed the following package:
+
+        $  npm install --save-dev babel-plugin-transform-class-properties
+
+    2.  Added the package as a babel plugin in the .babelrc file:
+
+        {
+            "presets": ["babel-preset-env", "react"],
+            "plugins": ["transform-class-properties"]
+        }
+```
+
+Reference:  
+-- https://medium.com/@machnicki/handle-events-in-react-with-arrow-functions-ede88184bbb
+
+-- https://stackoverflow.com/questions/42063854/arrow-function-syntax-not-working-with-webpack
+
+2.  The class '.container' is linked to bootstrap.
 
 
 
