@@ -1,10 +1,30 @@
+
+/* add a circle border around the gear */
 img {
 	/* border-radius defines the radius of the element corners */
-	border-radius: 50%;
+	/* position: absolute;
+	left: 50%;
+	top: 0%; */
+	backface-visibility: hidden;
+	border-radius: 50%; /* add rounded border to div */
+	background-color: white;
 	transition: transform 0.9s ease-in-out;
+
 }
 
-/* on hover, rotate image */
+img:hover {
+	transform: rotate(270deg);
+}
+
+.right {
+	position: relative;
+	left: 10%;
+	top: 10%;
+}
+
+/*
+
+/* on hover, rotate image 
 .right > img:hover {
     transform: rotate(270deg);
 }
@@ -14,10 +34,8 @@ img {
 }
 
 .gearSVG {
-	width: 80%;
-	height: auto;
-	background-color: orange;
+	width: 40%;
 }
 
 
-
+*/

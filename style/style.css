@@ -3,7 +3,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; /* padding and borders not added to height/width */
+    box-sizing: border-box; /* padding and borders not added to height/width */
+    border-spacing: 0px; /* overrides border-spacing for <table> element */
 }
 
 /* Font properties usually inherited from the parent (body) element */
@@ -65,18 +66,16 @@ body {
 }
 
 .heading-secondary {
-	
-	color: #fff;
-	position: absolute;
-    top: 72%; /* in relation to parent element */
-    right: 60px;
+    display: block;
+    position: absolute; /* measured from the top of the header <div> */
+    top: 70vh; /*top: 40%;*/
+    left: 65%;
     animation: moveInRight 1.4s ease-out;
-    /*transform: translate(-50%, -60%); /* in relation to element itself */
-
 }
 
 .heading-secondary-main {
-	font-family: Kameron;
+    font-family: Kameron;
+    color: #fff;
 	display: block;
 	font-size: 24px;
 	letter-spacing: 4px;

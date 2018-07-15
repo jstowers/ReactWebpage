@@ -1,11 +1,13 @@
 .contain {
-	background-color: #ddd;
+	background-color: white;
 	padding: 10px;
-	height: 400px;
+	height: 100px;
 }
 
 .content {
 	animation: move 4s linear;
+	font-size: 24px;
+	font-family: Kameron;
 }
 
 @keyframes move {
@@ -15,12 +17,12 @@
 	}
 
 	50% {
+		opacity: 0.5;
 		transform: translateY(200px);
 	}
 
 	100% {
 		opacity: 1;
-		/*translate:0;*/
-
+		transform: translate(0);
 	}
 }
