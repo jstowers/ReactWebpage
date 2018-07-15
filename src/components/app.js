@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import BannerContainer from './BannerContainer';
+import Menu from '../containers/Menu';
 
 class App extends Component {
 
@@ -8,9 +8,7 @@ class App extends Component {
 		return (
 			<div>
 				<Header />
-				<div>
-					<BannerContainer />
-				</div>
+				<Menu />
 			</div>
 		);
 	}

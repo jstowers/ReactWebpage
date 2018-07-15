@@ -6,17 +6,14 @@ import GearSmall from './GearSmall';
 import menuStyle from '../../style/menu.css';
 
 class MenuItemLeft extends Component {
-
+	// <span className='text-box'>{this.props.id}</span>
 	// add styling here for the polygon box
 	render() {
 		return (
-			<div>
 				<GearSmall 
 					id={this.props.id} 
 					rotate={'right'}
 				/>
-				<span className='text-box'>{this.props.id}</span>
-			</div>
 		);
 	}
 }
