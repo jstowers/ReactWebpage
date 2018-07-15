@@ -1,22 +1,35 @@
 .menu {
 	margin-top: 20px;
-	margin-bottom: 10px;
+	margin-bottom: 1px;
+}
+
+.menu-items {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .menu-tab {
-	width: 33vw;
+	width: 30vw;
 	height: 25vh;
-	background-color: tomato;
+	background-color: tomato; /*background-color: #54a0ff; sunflower blue*/
 	clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 65%);
-	/*background-color: #54a0ff; sunflower blue*/
+	margin-bottom: 100px;
 }
 
-/*
-.text-box {
+/* position gear component inside polygon */
+.gear-location {
 	position: relative;
-    top: -10%; // in relation to parent element
-	left: 60%;
-	font-size: 24px;
-    /*transform: translate(-50%, -60%); /* in relation to element itself
+	left: 8%;
+	bottom: 2%;
 }
-*/
+
+/* position text elements in relation to parent <div> */
+.text-box {
+	position: absolute;
+    top: 25%; 
+	left: 27%;
+	color: white;
+	font-size: 28px;
+	font-family: 'Kameron';
+	letter-spacing: 4px;
+}
