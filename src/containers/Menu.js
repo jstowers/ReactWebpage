@@ -24,7 +24,9 @@ class Menu extends Component {
 		console.log('==> Inside displayMenuItems');
 		return (
 			<tr key={item}>
-				<td className='menu-tab'><MenuItemLeft id={item} /></td>
+				<td className='menu-tab'>
+					<MenuItemLeft id={item} />
+				</td>
 				<td>Content</td>
 			</tr>
 		);
