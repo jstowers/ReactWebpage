@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import backgroundStyle from '../../style/background.css';
 
-class CanvasContent extends Component {
+class MenuItemRight extends Component {
 
 	constructor(props) {
 		super(props);
@@ -40,17 +40,17 @@ class CanvasContent extends Component {
 	} 
 
 	render() {
-		const { id, content } = this.props;
+		const { id, menuItem } = this.props;
 
-		if (content === 'About' && id === 'About') {
+		if (menuItem[0] === 'About' && id === 'About') {
 			return this.displayLineByLine(this.AboutData);
-		} else if (content[0] === id) {
+		} else if (menuItem[0] === 'Experience' && id === 'Experience') {
 			return this.displayLineByLine(this.ExperienceData);
-		} else if (content[0] === id) {
+		} else if (menuItem[0] === 'Skills' && id === 'Skills') {
 			return this.displayLineByLine(this.Skills);
 		}
-		return <div />;
+		else return <div />;
 	}
 }
 
-export default CanvasContent;
+export default MenuItemRight;
