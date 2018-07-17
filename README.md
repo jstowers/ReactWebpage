@@ -1,9 +1,9 @@
-# ReactWebpage
-An updated webpage using React 16 and Webpack 3.
+# React/Redux Webpage
+An updated personal webpage using React 16, Redux 5, and Webpack 3.
 
 ## Run the Webpack Dev Server
 
-Lightweight dev server running on http://localhost:8080.  Implements hot loading to automatically refresh parts of the page that have changed.
+For development, run this lightweight dev server on http://localhost:8080.  Implements hot loading to automatically refresh parts of the page that have changed.
 
 ```
     1.  To start the dev server:
@@ -16,20 +16,22 @@ Lightweight dev server running on http://localhost:8080.  Implements hot loading
 
 ## Webpack Build
 
-- Add a node script in package.json to run the locally-installed version of webpack:
-        $  npm run build
+Add a node script in package.json to run the locally-installed version of webpack:
+```` javascript 
+    $  npm run build
+````
 
 ---
 
 
-### December 9, 2017
+_December 9, 2017_
 ---
 I tried to update an existing repository, but so many dependencies were outdated that I thought a blank canvas would provide a fresh start.
 
 Goals:
 -  Update my webpage
 -  Add a cog animation
--  Deploy to AWS
+-  Deploy to AWS S3
 
 Basic Webpage Setup:
 1. Copy index.html template
@@ -52,9 +54,6 @@ Basic Webpage Setup:
 5. Build webpack bundle
 6. Render my updated homepage
 
-
-
-
 ## Webpack Loaders
 Loaders pre-process files before placing them into the bundle.js file
 
@@ -64,7 +63,7 @@ Loaders pre-process files before placing them into the bundle.js file
 3.  babel-preset-env => ruleset (dozens of individual rules) for telling babel exactly what pieces of ES15/16/17 syntax to look for, and how to turn it into ES5 code.  Ex) turns arrow functions into regular functions; turns let into var.
 
 ### publicPath
-To allow on-demand-loading of webpages, it is important to specify the public URL of the output directory when referenced in a browser.  
+To allow on-demand loading of webpages, it is important to specify the public URL of the output directory when referenced in a browser.  
 
 Simple Rule: the URL of the output.path from the view of the HTML page.
 
@@ -72,12 +71,12 @@ The value of this property is prefixed to every URL created by the runtime or lo
 
 If this property is not specified correctly, the browser won't load any changes.
 
-````
-        output: {
-            path: path.resolve(__dirname, 'build'),
-            publicPath: 'build/',
-            filename: 'bundle.js'
-        },
+```` javascript
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        publicPath: 'build/',
+        filename: 'bundle.js'
+    },
 ````
 
 ### Banner Build ###
@@ -101,7 +100,8 @@ __Questions__
 
 ```
     Answer:  
-    Arrow functions located inside a class are not included in the ES2015/2016 webpack configuration.  An additional npm package must be installed and added to the webpack configuration.
+    Arrow functions located inside a class are not included in the ES2015/2016 webpack configuration.  
+    An additional npm package must be installed and added to the webpack configuration.
 
     1.  Installed the following package:
 
@@ -116,9 +116,9 @@ __Questions__
 ```
 
 Reference:  
--- https://medium.com/@machnicki/handle-events-in-react-with-arrow-functions-ede88184bbb
+https://medium.com/@machnicki/handle-events-in-react-with-arrow-functions-ede88184bbb
 
--- https://stackoverflow.com/questions/42063854/arrow-function-syntax-not-working-with-webpack
+https://stackoverflow.com/questions/42063854/arrow-function-syntax-not-working-with-webpack
 
 2.  The class '.container' is linked to bootstrap.
 
