@@ -2,7 +2,10 @@
 // Friday, July 13, 2018
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import MenuItemLeft from '../components/MenuItemLeft';
+import MenuItemRight from '../components/MenuItemRight';
 import menuStyle from '../../style/menu.css';
 
 class Menu extends Component {
@@ -16,18 +19,18 @@ class Menu extends Component {
 				'Experience',
 				'Skills',
 				'Passions'
-			]
+			],
 		};
 	}
 
 	displayMenuItems = (item) => {
-		console.log('==> Inside displayMenuItems');
+		
 		return (
 			<tr key={item}>
 				<td className='menu-tab'>
 					<MenuItemLeft id={item} />
 				</td>
-				<td>Content</td>
+				<td><MenuItemRight id={item} menuItem={this.props.canvas}/></td>
 			</tr>
 		);
 	}
@@ -35,8 +38,8 @@ class Menu extends Component {
 	render() {
 		return (
 			<div className='menu'>
-				<table>
-					<tbody className="menu-items">
+				<table className="menu-items">
+					<tbody>
 						{ this.state.menuItems.map(this.displayMenuItems) }
 					</tbody>
 				</table>
@@ -45,7 +48,11 @@ class Menu extends Component {
 	}
 }
 
-export default Menu;
+function mapStateToProps({ canvas }) {
+	return { canvas };
+}
+
+export default connect(mapStateToProps)(Menu);
 
 /* Old Menu Container
 
