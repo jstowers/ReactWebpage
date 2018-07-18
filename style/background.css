@@ -5,24 +5,42 @@
 }
 
 .content {
-	animation: move 4s linear;
+	animation: move 2s linear;
 	font-size: 24px;
 	font-family: Kameron;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+.experience-title {
+	color: black;
+}
+
+.experience-company {
+	font-size: 24px;
+	font-family: Kameron;
+	font-weight: 400;
+	color: green;
+}
+
+.experience-location {
+	font-size: 20px;
+	color: tomato;
 }
 
 @keyframes move {
 	0% {
 		opacity: 0.1;
-		transform: translateY(0);
+		transform: translateX(0);
 	}
 
 	50% {
-		opacity: 0.5;
-		transform: translateY(200px);
+		opacity: 0.6;
+		transform: translateX(150px);
 	}
 
 	100% {
 		opacity: 1;
-		transform: translate(0);
+		transform: translateX(0px);
 	}
 }

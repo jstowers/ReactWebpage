@@ -7,9 +7,10 @@
 	border-spacing: 0px 30px;
 }
 
+/* polygon shape for menu items */
 .menu-tab {
 	width: 30vw;
-	height: 25vh;
+	height: 30vh;
 	background-color: tomato; /*background-color: #54a0ff; sunflower blue*/
 	clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 65%);
 }
@@ -24,8 +25,8 @@
 /* position text elements in relation to parent <div> */
 .text-box {
 	position: absolute;
-    top: 25%; 
-	left: 27%;
+    top: 26%; 
+	left: 32%;
 	color: white;
 	font-size: 28px;
 	font-family: 'Kameron';
