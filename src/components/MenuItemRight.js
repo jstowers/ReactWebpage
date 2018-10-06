@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import backgroundStyle from '../../style/background.css';
 
 class MenuItemRight extends Component {
-
+	
 	constructor(props) {
 		super(props);
 
@@ -16,7 +16,7 @@ class MenuItemRight extends Component {
 			'It can bust through a technical barrier, streamline a clunky process, ',
 			'and add cash-in-your pocket value.'
 		];
-
+	
 		this.ExperienceData = [
 			{
 				company: 'Yapstone',
@@ -46,8 +46,8 @@ class MenuItemRight extends Component {
 		];
 
 		this.Skills = [
-			'JavaScript / React / Redux / Node',
-			'Express / Webpack / Mongo / AWS',
+			'JavaScript / React / Redux ',
+			'Node / Express / Mongo / AWS',
 			'Jest / Mocha / Chai',
 			'Java / SQL Server',
 		];
@@ -61,8 +61,6 @@ class MenuItemRight extends Component {
 	}
 
 	displayExperience(array) {
-		console.log('==> Inside displayExperience');
-		console.log('array = ', array);
 		return array.map((item, index) => (
 			<div className='content'key={index}>
 				<span className='experience-title'>{item.title} - </span>
