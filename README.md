@@ -123,7 +123,32 @@ https://stackoverflow.com/questions/42063854/arrow-function-syntax-not-working-w
 2.  The class '.container' is linked to bootstrap.
 
 
+### Three Fundamental Pillars of Writing Good HTML & CSS
+Sec. 3, Lec. 12
 
+1.  Responsive Design
+2.  Writing maintainable and scalable code
+3.  Web performance
+
+_Responsive Design_
+- Build one website that works beautifully on all screen sizes and across all devices
+- Ex) fluid layouts & media queries
+- Responsive images - correct units for font size and dimensions
+- Desktop or mobile first strategy
+
+_Maintainable and Scalable Code_
+- Clean, easy to understand code
+- Reusable
+- Supports future growth
+- Care about CSS architecture, organize files, names classes, and structure markup in HTML
+
+_Web Performance_
+- Make a website faster and smaller in size
+- Reduce number of files in HTML doc
+- Decrease number of HTTP requests and user downloads
+- Fewer files in HTML docs
+- Write as little code; compress code, use pre-processor
+- Reduce images to the essential ones; also compress images
 
 
 

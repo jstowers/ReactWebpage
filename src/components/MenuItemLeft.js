@@ -1,11 +1,8 @@
 // MenuItemLeft
-// July 13, 2018
+// July 13, 2018 / October 6, 2018
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-// import fetchCanvas payload
 import { fetchCanvas } from '../actions/index';
 import GearSmall from './GearSmall';
 import menuStyle from '../../style/menu.css';
@@ -21,7 +18,6 @@ class MenuItemLeft extends Component {
 	}
 
 	onMouseOverGear = (e) => {
-		console.log('==> onMouseOverGear');
 		e.preventDefault();
 		this.setState({ selectedItem: e.target.id });
 		this.props.fetchCanvas(e.target.id);
@@ -41,8 +37,8 @@ class MenuItemLeft extends Component {
 	}
 }
 
-function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ fetchCanvas }, dispatch);
-}
+const mapDispatchToProps = {
+	fetchCanvas
+};
 
 export default connect(null, mapDispatchToProps)(MenuItemLeft);

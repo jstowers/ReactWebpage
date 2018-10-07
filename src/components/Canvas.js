@@ -8,9 +8,7 @@ import backgroundStyle from '../../style/background.css';
 class Canvas extends Component {
 
 	render() {
-		console.log('Canvas props =', this.props);
 		const { canvas, id } = this.props;
-
 		return <CanvasContent content={canvas} id={id} />
 	}
 }

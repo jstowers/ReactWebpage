@@ -9,7 +9,7 @@ class GearSmall extends Component {
 		const { id, onMouseOver } = this.props;
 
 		return (
-			<img className='gear-size'
+			<img className='gear-size img-gear'
 				id={id}
 				alt="Rotating Gear"
 				src={gearSVG}

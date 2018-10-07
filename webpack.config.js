@@ -15,8 +15,8 @@ const config = {
 	// __dirname => const in nodeJS for current pwd
 	// usually save output to folder 'build'
 	output: {
-		  path: path.resolve(__dirname, 'build'),
-		  publicPath: 'build/',
+		path: path.resolve(__dirname, 'build'),
+		publicPath: 'build/',
     	filename: 'bundle.js'
   	},
 

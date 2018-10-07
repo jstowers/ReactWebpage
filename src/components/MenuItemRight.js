@@ -19,6 +19,13 @@ class MenuItemRight extends Component {
 	
 		this.ExperienceData = [
 			{
+				company: 'NIC',
+				title: 'Developer III',
+				location: 'Austin',
+				duration: 'Current',
+
+			},
+			{
 				company: 'Yapstone',
 				title: 'Software Engineer',
 				location: 'Austin',
@@ -37,24 +44,26 @@ class MenuItemRight extends Component {
 				location: 'Houston',
 				duration: '2010 to 2015',
 			},
+			/*
 			{
 				company: 'Tekell, Book, Allen & Morris',
 				title: 'Attorney',
 				location: 'Houston',
 				duration: '2005 to 2010'
 			}
+			*/
 		];
 
 		this.Skills = [
 			'JavaScript / React / Redux ',
-			'Node / Express / Mongo / AWS',
-			'Jest / Mocha / Chai',
+			'Node / Express / MongoDB',
+			'Jest / Enzyme / AWS',
 			'Java / SQL Server',
 		];
 
 		this.Passions = [
 			'Reggaeton',
-			'Skis/Boards',
+			'Skis & Boards',
 			'Guitars',
 			'Cooking'
 		]

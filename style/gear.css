@@ -1,5 +1,5 @@
 /* add white circle border around gear */
-img {
+.img-gear {
 	border-radius: 50%; 
 	background-color: white;
 	transition: transform 0.9s ease-in-out;
@@ -7,7 +7,7 @@ img {
 }
 
 /* rotate gear clockwise on mouse hover */
-img:hover {
+.img-gear:hover {
 	transform: rotate(270deg);
 }
 
